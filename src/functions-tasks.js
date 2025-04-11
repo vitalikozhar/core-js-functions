@@ -100,7 +100,7 @@ function getPowerFunction(exponent) {
 function getPolynom(...coefficients) {
   if (coefficients.length === 0) return null;
 
-  return function (x) {
+  return function func(x) {
     return coefficients.reduce((acc, el, index) => {
       const power = coefficients.length - index - 1;
       return acc + el * x ** power;
